@@ -5,8 +5,6 @@
 <style>
   nav {
     border-bottom: 1px solid rgba(255,62,0,0.1);
-    font-weight: 300;
-    padding: 0 1em;
   }
 
   ul {
@@ -15,16 +13,6 @@
   }
 
   /* clearfix */
-  ul::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-
-  li {
-    display: block;
-    float: left;
-  }
 
   [aria-current] {
     position: relative;
@@ -36,29 +24,27 @@
     content: '';
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255,62,0);
+    background-color: black;
     display: block;
     bottom: -1px;
   }
 
   a {
-    text-decoration: none;
-    padding: 1em 0.5em;
-    display: block;
-  }
-
-  a.navbar-brand {
-    display: inline-block;
-    float: left;
-    font-weight: 600;
+    padding: 0.5em 0.5em;
   }
 </style>
 
-<nav>
-   <a class="navbar-brand" href='.'>Mood Tracker</a>
-  <ul>
-    <li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-    <li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
-    <li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href='.'>Mood Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
+      <li class="nav-item"><a class="nav-link" aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
+      <li class="nav-item"><a class="nav-link" rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
+    </ul>
+  </div>
 </nav>
