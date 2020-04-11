@@ -43,6 +43,7 @@
   <div class="collapse navbar-collapse" id="navbarToggler">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item"><a class="nav-link" aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
+      <li class="nav-item"><a class="nav-link" rel=prefetch aria-current='{segment === "entries" ? "page" : undefined}' href='entries'>entries</a></li>
       <li class="nav-item"><a class="nav-link" aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
       <li class="nav-item"><a class="nav-link" rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
     </ul>
